@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pruebas</title>
+</head>
+<body>
+    <script>
+        var a=parseInt(Math.random(100)*101);
+var numero=prompt(" ingrese un numero");
+var cont=0;
+while(numero!=a){
+    if(numero==null){
+        document.write("Ha cancelado la tarea, ");
+        break;     
+    }
+    else if(isNaN(numero)){   
+        numero=prompt("no se ha introducido un numero, vuelva a introducirlo"); 
+        cont++;  
+    }
+    else if (numero<a){   
+        numero=prompt("ha fallado, el numero es mayor, vuelva a introducir un numero");
+        cont++; 
+    }
+    else if (numero>a){
+        numero=prompt("ha fallado, el numero es menor, vuelva a introducir un numero");
+        cont++;
+    } 
+}
+cont++;
+document.write("juego terminado, el numero era igual a: "+a+", lo ha intentado "+cont+" veces");
+    </script>
+</body>
+</html>

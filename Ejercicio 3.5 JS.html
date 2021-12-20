@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pruebas</title>
+</head>
+<body>
+    <script>
+        var nombre=prompt("ingrese el nombre");
+var apellidos=prompt("ingrese el apellido");
+var salario=parseFloat(prompt("ingrese el salario"));
+var edad=parseInt(prompt("ingrese la edad"));
+if(salario<2000 && salario>1000){
+    if(edad>45){
+        salario=salario+(salario*(0.03));
+    }
+    else if(edad<=45){
+        salario=salario+(salario*(0.1));
+    }
+}
+else if(salario<1000){
+    if (edad<30){
+        salario=1100;
+    }
+    else if(edad>=30 && edad<=45){
+        salario=salario+(salario*(0.03));
+    }
+    else if(edad>45){
+        salario=salario+(salario*(0.15));
+    }
+}
+document.write("nombre: "+nombre+", apellido: "+apellidos+", salario: "+salario.toFixed(2)+", edad: "+edad);
+    </script>
+</body>
+</html>

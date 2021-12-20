@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo Calculadora</title>
+</head>
+<body>
+    <p>
+        class Calculadora {     
+            constructor() {         
+                this._resultado=0;         
+                this._num1=0; 
+                this._num2=0;     
+            }          
+            set resultado(calculo) {
+                if (calculo==1){
+                    this._resultado=this._num1+this._num2;
+                }
+                else if (calculo==2){
+                    this._resultado=this._num1-this._num2;
+                }             
+            }      
+            get resultado() {       
+                var saliente="El resultado es: "+this._resultado;      
+                document.getElementById("output").innerHTML=saliente;     
+            }          
+            introducirDatos() {           
+                var numero1;
+                var numero2;         
+                numero1=parseInt(prompt("Introduce primer numero: "));         
+                numero2=parseInt(prompt("Introduce segundo numero: "));                     
+                    this._num1=numero1;                           
+                    this._num2=numero2;                     
+            }
+        }        
+                function programa(operacion) {      
+                    var objCalcula = new Calculadora();     
+                    objCalcula.introducirDatos();     
+                    objCalcula.resultado=operacion;     
+                    objCalcula.resultado;    
+                    } 
+    </p>
+    
+</body>
+</html>

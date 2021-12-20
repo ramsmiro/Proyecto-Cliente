@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sit ipsa molestiae itaque? Odit facilis, consectetur perspiciatis, molestiae labore optio id deleniti tenetur, velit sint dolorum dicta. Facilis, temporibus ipsum.</li>
+        <li>Autem rerum optio ipsum cupiditate magni sapiente laborum animi ipsa nobis non possimus, officiis reiciendis suscipit necessitatibus labore ipsam eos sequi aperiam, recusandae, quisquam impedit voluptatem veritatis. Ratione, error quaerat.</li>
+        <li>Ea atque, dolorum temporibus quidem, perspiciatis dicta sapiente voluptatum porro quisquam esse voluptatibus obcaecati eos. Natus rerum odio, sint, officia delectus omnis, aliquam sit fugit dolorum vitae expedita veniam totam.</li>
+        <li>Delectus consequuntur molestiae cum placeat incidunt rerum perferendis, laboriosam repellat at nesciunt! Cupiditate adipisci asperiores exercitationem alias, nesciunt quisquam quam, quasi beatae molestiae optio id molestias at quia consequatur saepe.</li>
+        <li>At reiciendis laborum dignissimos ullam et odio id mollitia assumenda pariatur velit dolor maiores explicabo eligendi quibusdam voluptatum hic ipsa cupiditate nulla repudiandae minus modi magnam, quia sit! Quaerat, exercitationem.</li>
+        <li>Nemo architecto similique laboriosam ipsa, quaerat sunt consequuntur repudiandae dolore omnis earum, dicta amet nostrum laudantium nisi repellendus iure perferendis accusamus voluptates quasi? Pariatur vitae sapiente quibusdam earum facere quam.</li>
+        <li>Dolorum, quis eum, pariatur sit architecto recusandae veniam velit exercitationem odit nulla dignissimos, minus suscipit! Quo totam illum repudiandae corporis dolorem minus perspiciatis. Quos veritatis corporis excepturi sit aperiam atque.</li>
+        <li>Fugit, corporis. Nostrum explicabo eos culpa hic libero. Est dolores dolore, eaque vel dolorum sit cumque facere placeat. Fugiat iure non eaque culpa cumque esse vero consequatur. Laboriosam, sit itaque!</li>
+        <li>Eaque provident porro incidunt nisi quae ullam tenetur, quia suscipit id enim praesentium! Possimus vel voluptas cupiditate dolor placeat tenetur minima veritatis, nemo numquam temporibus, atque odio! Doloremque, alias omnis?</li>
+    </ol>
+    <ol>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sit ipsa molestiae itaque? Odit facilis, consectetur perspiciatis, molestiae labore optio id deleniti tenetur, velit sint dolorum dicta. Facilis, temporibus ipsum.</li>
+        <li>Autem rerum optio ipsum cupiditate magni sapiente laborum animi ipsa nobis non possimus, officiis reiciendis suscipit necessitatibus labore ipsam eos sequi aperiam, recusandae, quisquam impedit voluptatem veritatis. Ratione, error quaerat.</li>
+        <li>Ea atque, dolorum temporibus quidem, perspiciatis dicta sapiente voluptatum porro quisquam esse voluptatibus obcaecati eos. Natus rerum odio, sint, officia delectus omnis, aliquam sit fugit dolorum vitae expedita veniam totam.</li>
+        <li>Delectus consequuntur molestiae cum placeat incidunt rerum perferendis, laboriosam repellat at nesciunt! Cupiditate adipisci asperiores exercitationem alias, nesciunt quisquam quam, quasi beatae molestiae optio id molestias at quia consequatur saepe.</li>
+        <li>At reiciendis laborum dignissimos ullam et odio id mollitia assumenda pariatur velit dolor maiores explicabo eligendi quibusdam voluptatum hic ipsa cupiditate nulla repudiandae minus modi magnam, quia sit! Quaerat, exercitationem.</li>
+        <li>Nemo architecto similique laboriosam ipsa, quaerat sunt consequuntur repudiandae dolore omnis earum, dicta amet nostrum laudantium nisi repellendus iure perferendis accusamus voluptates quasi? Pariatur vitae sapiente quibusdam earum facere quam.</li>
+        <li>Dolorum, quis eum, pariatur sit architecto recusandae veniam velit exercitationem odit nulla dignissimos, minus suscipit! Quo totam illum repudiandae corporis dolorem minus perspiciatis. Quos veritatis corporis excepturi sit aperiam atque.</li>
+        <li>Fugit, corporis. Nostrum explicabo eos culpa hic libero. Est dolores dolore, eaque vel dolorum sit cumque facere placeat. Fugiat iure non eaque culpa cumque esse vero consequatur. Laboriosam, sit itaque!</li>
+        <li>Eaque provident porro incidunt nisi quae ullam tenetur, quia suscipit id enim praesentium! Possimus vel voluptas cupiditate dolor placeat tenetur minima veritatis, nemo numquam temporibus, atque odio! Doloremque, alias omnis?</li>
+    </ol>
+    <script>
+        var texto =prompt("intruduzca texto");
+        var posicion =parseInt(prompt("intruduzca un numero del 1 al 10"));
+        if (posicion <1 || posicion >10 || isNaN(posicion)){
+            alert("ha introducido un dato incorrecto");
+        }
+        else{
+            var lista=document.getElementsByTagName("ol")[0];
+            var nuevo=document.createElement("li");
+            nuevo.innerHTML='<strong>'+texto+'</strong>';
+            if(posicion==10){
+                lista.appendChild(nuevo);
+            }
+            else{
+            let lisiguiente=lista.children[posicion-1];
+            lista.insertBefore(nuevo,lisiguiente);    
+            }
+        
+        
+        }
+        
+    </script>
+</body>
+</html>
