@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PruebaJQuery</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).keydown(function(tecla){
+    $('#hijo').css('position', 'relative');
+    if (tecla.keyCode == 37) { 
+        $('#hijo').animate({left: "-=10px"}, 'fast');
+    }else if(tecla.keyCode == 38) { 
+        $('#hijo').animate({top: "-=10px"}, 'fast'); 
+    }else if(tecla.keyCode == 39){ 
+        $('#hijo').animate({left: "+=10px"}, 'fast'); 
+    }else if(tecla.keyCode == 40){
+        $('#hijo').animate({top: "+=10px"}, 'fast');
+    }
+});
+</script>
+<body>
+    <section id="square" style="border: 1px solid black;
+    height: 300px;
+    margin: 20px auto;
+    position: relative;
+    width: 60%;">
+        <div id="hijo" style="background-color: red; position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 50px;
+        height: 50px;">
+        </div>
+    </section>
+</body>
+</html>

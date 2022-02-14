@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+$("#imagen2").css("display","none");
+$("#imagen3").css("display","none");
+$('#imagen1').css('position', 'absolute');
+$('#imagen2').css('position', 'absolute');
+$('#imagen3').css('position', 'absolute');
+
+        $("#imagen1").animate({left:"100%"},10000);
+        $("#imagen2").show(1500); 
+        $("#imagen2").animate({left:"100%"},10000);
+        $("#imagen3").show(3000);
+        $("#imagen3").animate({left:"100%"},10000); 
+        $("#imagen1").animate({left:"0%"});
+        $("#imagen2").animate({left:"0%"});
+        $("#imagen3").animate({left:"0%"});
+        $("#imagen2").hide(1500);
+        $("#imagen3").hide(3000);
+       
+});
+function animate(){
+    $(document).ready(function(){
+
+$("#imagen2").css("display","none");
+$("#imagen3").css("display","none");
+$('#imagen1').css('position', 'absolute');
+$('#imagen2').css('position', 'absolute');
+$('#imagen3').css('position', 'absolute');
+
+        $("#imagen1").animate({left:"100%"},10000);
+        $("#imagen2").show(1500); 
+        $("#imagen2").animate({left:"100%"},10000);
+        $("#imagen3").show(3000);
+        $("#imagen3").animate({left:"100%"},10000); 
+        $("#imagen1").animate({left:"0%"});
+        $("#imagen2").animate({left:"0%"});
+        $("#imagen3").animate({left:"0%"});
+        $("#imagen2").hide(1500);
+        $("#imagen3").hide(3000);
+       
+});
+}    
+
+setInterval(animate, 15000);
+
+</script>
+<body>
+    <div style="background: red;width: 1600px;height: 200px;">
+        <img src="img/distribucion.jpg" id="imagen1" style="width: 300px;height: 200px;">
+        
+        <img src="img/oficina.jpg" id="imagen2" style="width: 300px;height: 200px;">
+        
+        <img src="img/produccion.jpg" id="imagen3" style="width:300px;height:200px;">
+    </div>
+</body>
+</html>

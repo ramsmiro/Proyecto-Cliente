@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery pelota</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>   
+    $(document).ready(function(){
+        $("button").click(function(){
+        if(parseInt($("#A").val())>parseInt($("#B").val())){            
+            $("div").animate({left:"250px"},4000);
+            capaResultado.textContent="El numero A es mayor que el numero B";
+                     
+        }
+        else if(parseInt($("#A").val())<parseInt($("#B").val())){  
+            $("div").animate({bottom:"250px"},4000);
+            capaResultado.textContent="El numero A es menor que el numero B";          
+        }
+        else{
+            capaResultado.textContent="Los numeros son iguales";
+        }
+      $("div").hide(0);
+      setTimeout("location.reload(true);", 4500);
+    });
+});  
+    </script>
+<body>   
+    <form>
+        <p>A</p><input type="text" id="A">
+        <p>B</p><input type="text" id="B">
+        <br><br>
+        <button type="button">Jugar</button>
+    </form>
+    <br><br>
+    <p id="capaResultado">El resultado es:</p>
+
+    <div style="background-color: red;height: 100px;width: 100px;position: absolute;"></div>
+    
+</body>
+</html>
